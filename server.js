@@ -1,18 +1,30 @@
-const WebSocket = require('ws');
+var socket;
 
-const wss = new WebSocket.Server({ port: 3000 });
+function connectWebSocket() {
+    // 创建WebSocket连接
+    socket = new WebSocket('ws://your-websocket-server-url');
 
-wss.on('connection', function connection(ws) {
-    ws.on('message', function incoming(message) {
-        // 在这里实现根据需求的消息转发逻辑
-        // 比如将消息存储到数据库，并向其他客户端广播消息
+    // 监听WebSocket连接打开事件
+    socket.onopen = function() {
+        console.log('WebSocket connected');
+    };
+
+    // 监听WebSocket收到消息事件
+    socket.onmessage = function(event) {
+        var message = event.data;
         console.log('Message received: ' + message);
 
-        // 广播消息给其他客户端
-        wss.clients.forEach(function each(client) {
-            if (client !== ws && client.readyState === WebSocket.OPEN) {
-                client.send(message);
-            }
-        });
-    });
-});
+        // 显示接收到的消息
+        showMessage(message);
+    };
+
+    // 监听WebSocket连接关闭事件
+    socket.onclose = function() {
+        console.log('WebSocket connection closed');
+    };
+}
+
+function showMessage(message) {
+    var messageBox = document.getElementById('messageBox');
+    messageBox.value += message + '\n';
+}
