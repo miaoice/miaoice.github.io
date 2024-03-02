@@ -4,21 +4,15 @@
     <title>IP地址获取和消息发送</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // 获取IP地址
-        function getIPAddress() {
-            $.getJSON("https://jsonip.com/?callback=?", function (data) {
-                var ipAddress = data.ip;
-                $('#ipAddress').val(ipAddress);
-            });
-        }
-
-        // 发送消息
+        // 发送消息到后台
         function sendMessage() {
-            var ipAddress = $('#ipAddress').val();
             var message = $('#message').val();
 
-            // 将消息发送到后台或其他人
-            // 你可以在这里实现具体的后台传输逻辑
+            // 将消息发送到后台服务器
+            $.post("http://example.com/submit-message", { message: message }, function (data) {
+                // 处理后台服务器的响应
+                console.log("Message sent successfully!");
+            });
 
             // 清空消息输入框
             $('#message').val('');
@@ -27,10 +21,6 @@
 </head>
 <body>
     <h1>IP地址获取和消息发送</h1>
-    <label for="ipAddress">IP地址：</label>
-    <input type="text" id="ipAddress" readonly="readonly" />
-    <button type="button" onclick="getIPAddress()">获取IP地址</button>
-    <br /><br />
     <label for="message">消息：</label>
     <input type="text" id="message" maxlength="100" />
     <button type="button" onclick="sendMessage()">发送</button>
