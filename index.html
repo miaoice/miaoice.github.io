@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>IP地址获取和消息发送</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>WebSocket连接示例</title>
     <script>
         var socket;
 
-        // 连接到WebSocket服务器
         function connectWebSocket() {
-            var ipAddress = $('#ipAddress').val();
-
             // 创建WebSocket连接
-            socket = new WebSocket('ws://' + ipAddress + ':3000');
+            socket = new WebSocket('ws://your-websocket-server-url');
 
             // 监听WebSocket连接打开事件
             socket.onopen = function() {
@@ -20,7 +16,11 @@
 
             // 监听WebSocket收到消息事件
             socket.onmessage = function(event) {
-                console.log('Message received: ' + event.data);
+                var message = event.data;
+                console.log('Message received: ' + message);
+
+                // 显示接收到的消息
+                showMessage(message);
             };
 
             // 监听WebSocket连接关闭事件
@@ -29,26 +29,16 @@
             };
         }
 
-        // 发送消息到WebSocket服务器
-        function sendMessage() {
-            var message = $('#message').val();
-
-            // 发送消息给WebSocket服务器
-            socket.send(message);
-
-            // 清空消息输入框
-            $('#message').val('');
+        function showMessage(message) {
+            var messageBox = document.getElementById('messageBox');
+            messageBox.value += message + '\n';
         }
     </script>
 </head>
 <body>
-    <h1>IP地址获取和消息发送</h1>
-    <label for="ipAddress">IP地址：</label>
-    <input type="text" id="ipAddress" />
-    <button type="button" onclick="connectWebSocket()">连接WebSocket</button>
+    <h1>WebSocket连接示例</h1>
+    <button type="button" onclick="connectWebSocket()">连接到WebSocket服务器</button>
     <br /><br />
-    <label for="message">消息：</label>
-    <input type="text" id="message" maxlength="100" />
-    <button type="button" onclick="sendMessage()">发送</button>
+    <textarea id="messageBox" readonly rows="10" cols="50"></textarea>
 </body>
 </html>
