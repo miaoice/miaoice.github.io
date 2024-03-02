@@ -4,15 +4,37 @@
     <title>IP地址获取和消息发送</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // 发送消息到后台
+        var socket;
+
+        // 连接到WebSocket服务器
+        function connectWebSocket() {
+            var ipAddress = $('#ipAddress').val();
+
+            // 创建WebSocket连接
+            socket = new WebSocket('ws://' + ipAddress + ':3000');
+
+            // 监听WebSocket连接打开事件
+            socket.onopen = function() {
+                console.log('WebSocket connected');
+            };
+
+            // 监听WebSocket收到消息事件
+            socket.onmessage = function(event) {
+                console.log('Message received: ' + event.data);
+            };
+
+            // 监听WebSocket连接关闭事件
+            socket.onclose = function() {
+                console.log('WebSocket connection closed');
+            };
+        }
+
+        // 发送消息到WebSocket服务器
         function sendMessage() {
             var message = $('#message').val();
 
-            // 将消息发送到后台服务器
-            $.post("http://example.com/submit-message", { message: message }, function (data) {
-                // 处理后台服务器的响应
-                console.log("Message sent successfully!");
-            });
+            // 发送消息给WebSocket服务器
+            socket.send(message);
 
             // 清空消息输入框
             $('#message').val('');
@@ -21,6 +43,10 @@
 </head>
 <body>
     <h1>IP地址获取和消息发送</h1>
+    <label for="ipAddress">IP地址：</label>
+    <input type="text" id="ipAddress" />
+    <button type="button" onclick="connectWebSocket()">连接WebSocket</button>
+    <br /><br />
     <label for="message">消息：</label>
     <input type="text" id="message" maxlength="100" />
     <button type="button" onclick="sendMessage()">发送</button>
