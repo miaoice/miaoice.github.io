@@ -1,167 +1,38 @@
-
-<!doctype html>
-<html lang="zh-cnm-Hans">
-
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="keywords" content="TONEX,TownOfNewEpic_Xtreme,TownOfNewEpicXtreme">
-	<meta name="description" content="TownOfNewEpic_Xtreme,An AmongUs mod with learning and love">
-	<meta name="author" content="TONEXWebSiteTeam">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-	<meta http-equiv="Content-Type" Content="text/html;Charset=UTF-8;">
-	<link rel="shortcut icon" href="Resource/Picture/TONEX.ico">
-	<title>TONEX官网 | TownOfNewEpic_Xtreme</title>
-	<script src="https://kit.fontawesome.com/49ac9e9f36.js" crossorigin="anonymous"></script>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-	<link href="Resource/CSS/index.css" rel="stylesheet">
-	<link href="Resource/CSS/AutoModeButton.css" rel="stylesheet">
-	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-		<symbol id="check2" viewBox="0 0 16 16">
-			<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" /> </symbol>
-		<symbol id="circle-half" viewBox="0 0 16 16">
-			<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" /> </symbol>
-		<symbol id="moon-stars-fill" viewBox="0 0 16 16">
-			<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-			<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" /> </symbol>
-		<symbol id="sun-fill" viewBox="0 0 16 16">
-			<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" /> </symbol>
-	</svg>
+    <title>IP地址获取和消息发送</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 获取IP地址
+        function getIPAddress() {
+            $.getJSON("https://jsonip.com/?callback=?", function (data) {
+                var ipAddress = data.ip;
+                $('#ipAddress').val(ipAddress);
+            });
+        }
+
+        // 发送消息
+        function sendMessage() {
+            var ipAddress = $('#ipAddress').val();
+            var message = $('#message').val();
+
+            // 将消息发送到后台或其他人
+            // 你可以在这里实现具体的后台传输逻辑
+
+            // 清空消息输入框
+            $('#message').val('');
+        }
+    </script>
 </head>
-
 <body>
-	<header>
-		<nav class="navbar navbar-expand-sm shadow-lg fixed-top">
-			<div class="container-fluid sticky-top">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button>
-				<a href="index.html"><img src="Resource/Picture/TONEX-Logo.png" alt="TONEX Logo" style="width:128px;" class="rounded-pill"></a>
-				<div class="collapse navbar-collapse" id="collapsibleNavbar">
-					<ul class="navbar-nav">
-						<li class="nav-item"> <a class="nav-link" href="about.html">关于我们</a> </li>
-						<li class="nav-item"> <a class="nav-link" href="tutorial.html">基本教程</a> </li>
-						<li class="nav-item"> <a class="nav-link" href="download.html">下载模组</a> </li>
-						<li class="nav-item"> <a class="nav-link" href="role.html">职业介绍</a> </li>
-						<li class="nav-item"> <a class="nav-link TONEX_link" href="sponsorship.html">赞助我们</a> </li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<div class="shadow container-fluid">
-			<br>
-			<h1 class="display-1 TONEX mt-5">TownOfNewEpic_Xtreme</h1>
-			<br> </div>
-	</header>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<section class="shadow mt-5 container">
-		<script>
-		var strArry = new Array("An AmongUs mod with learning and love", "幸福破灭之时，总是伴随着血腥味。<br><br><blockquote class='blockquote-footer text-end small'>《鬼灭之刃》</blockquote>", "只有分离后才能懂的事，却没有了感慨的时间。<br><br><blockquote class='blockquote-footer text-end small'>《宝石之国》</blockquote>", "因为,热爱", "愿时光能缓，愿故人不散。<br><br><blockquote class='blockquote-footer text-end small'>《我们仍未知道那天所看见的花的名字》</blockquote>");
-		var adv;
-		adv = strArry[parseInt(Math.random() * 5)];
-		document.write("<br><h3>" + adv + "</h3><br>");
-		</script>
-	</section>
-	<br>
-	<br>
-	<div class="btn-group btn-group-lg shadow"> <a href="about.html" class="btn btn-outline-primary">关于我们</a> <a href="tutorial.html" class="btn btn-outline-primary">基本教程</a> <a href="download.html" class="btn btn-primary">下载模组</a> <a href="role.html" class="btn btn-outline-primary">职业介绍</a> <a href="sponsorship.html" class="btn btn-outline-primary">赞助我们</a> </div>
-	<section class="shadow bg-primary mt-5 text-white container rounded">
-		<br>
-		<h2><span class='fas fa-bullhorn'>公告</span></h2>
-		<br>
-		<h4>关于玩家【NameYu】(storeroan#0331)的处罚结果</h4>
-		<p>经XtremeWave商议,我们决定将storeroan#0331以宣传、使用MalumMenu为理由加入EAC封禁名单。</p><br></section>
-	<section class="mt-5 shadow-lg container">
-		<br>
-		<h2>TONEX的那些职业<span class="badge shadow bg-primary">独家职业!</span></h2>
-		<div class="card-group shadow">
-			<div class="card"> <img src="Resource/Picture/TONEX.jpg" class="card-img-top" alt="异世闲游者">
-				<div class="card-body Neutral">
-					<h5 class="card-title">异世闲游者</h5>
-					<p class="card-text">"纵使苍天陨落，契约必须完成"</p>
-				</div> <a href="role.html#item-3-23" class="btn btn-outline-info shadow-sm">了解职业详情</a>
-				<div class="card-footer small">TownOfNewEpic_Xtreme</div>
-			</div>
-			<div class="card"> <img src="Resource/Picture/TONEX.jpg" class="card-img-top" alt="豺狼">
-				<div class="card-body Impostor">
-					<h5 class="card-title">恶猎手</h5>
-					<p class="card-text">"我怀恨在心"</p>
-				</div> <a href="Role.html#item-1-50" class="btn btn-outline-info shadow-sm">了解职业详情</a>
-				<div class="card-footer small">TownOfNewEpic_Xtreme</div>
-			</div>
-			<div class="card"> <img src="Resource/Picture/TONEX.jpg" class="card-img-top" alt="时停者">
-				<div class="card-body Crewmate">
-					<h5 class="card-title">时停者</h5>
-					<p class="card-text">"「The World！」"</p>
-				</div> <a href="role.html#item-2-30" class="btn btn-outline-info shadow-sm">了解职业详情</a>
-				<div class="card-footer small">TownOfNewEpic_Xtreme</div>
-			</div>
-			<div class="card"> <img src="Resource/Picture/TONEX.jpg" class="card-img-top" alt="时停者">
-				<div class="card-body Neutral">
-					<h5 class="card-title">'不演反派'</h5>
-					<p class="card-text">"刘德华为什么很少演反派?"</p>
-				</div> <a href="role.html#item-3-24" class="btn btn-outline-info shadow-sm">了解职业详情</a>
-				<div class="card-footer small">TownOfNewEpic_Xtreme</div>
-			</div>
-			<div class="card"> <img src="Resource/Picture/TONEX.jpg" class="card-img-top" alt="时停者">
-				<div class="card-body Add-ons">
-					<h5 class="card-title">变色龙</h5>
-					<p class="card-text">"看不见我看不见我"</p>
-				</div> <a href="role.html#item-4-25" class="btn btn-outline-info shadow-sm">了解职业详情</a>
-				<div class="card-footer small">TownOfNewEpic_Xtreme</div>
-			</div>
-		</div>
-		<br> </section>
-	<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-		<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="主题模式">
-			<svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-				<use href="#circle-half"></use>
-			</svg> <span class="visually-hidden" id="bd-theme-text">主题模式</span> </button>
-		<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-						<use href="#sun-fill"></use>
-					</svg> 浅色模式
-					<svg class="bi ms-auto d-none" width="1em" height="1em">
-						<use href="#check2"></use>
-					</svg>
-				</button>
-			</li>
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-						<use href="#moon-stars-fill"></use>
-					</svg> 深色模式
-					<svg class="bi ms-auto d-none" width="1em" height="1em">
-						<use href="#check2"></use>
-					</svg>
-				</button>
-			</li>
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-					<svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
-						<use href="#circle-half"></use>
-					</svg> 跟随系统
-					<svg class="bi ms-auto d-none" width="1em" height="1em">
-						<use href="#check2"></use>
-					</svg>
-				</button>
-			</li>
-		</ul>
-	</div>
-	<script src="Resource/JavaScript/color.js" language="javascript1.5" type="text/javascript"></script>
-	<footer class="shadow py-3 mt-5 container-fluid">
-		<br>
-		<br>
-		<br>
-		<hr class="container">
-		<p class="text-body-secondary small"><span class='far fa-copyright' style='font-size:15px'></span> 2023 - 2024 By <a href="https://qingfengawa.me" class="text-body-secondary" target="_blank"><i class='fas fa-link'></i>QingFeng</a>
-			<br>本站点由&nbsp;<a href="https://www.rainyun.com/QingFeng_" class='fas fa-cloud-sun-rain text-body-secondary' target="_blank">雨云</a>&nbsp;提供计算服务
-			<br>网站版本代码:2A0O2T4Q0P2W2I3B2(补丁更新)</p>
-	</footer>
+    <h1>IP地址获取和消息发送</h1>
+    <label for="ipAddress">IP地址：</label>
+    <input type="text" id="ipAddress" readonly="readonly" />
+    <button type="button" onclick="getIPAddress()">获取IP地址</button>
+    <br /><br />
+    <label for="message">消息：</label>
+    <input type="text" id="message" maxlength="100" />
+    <button type="button" onclick="sendMessage()">发送</button>
 </body>
-
 </html>
